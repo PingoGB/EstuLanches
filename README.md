@@ -4,6 +4,8 @@ Sistema de demonstração para gerenciar cardápio e pedidos de uma cantina esco
 
 Para configurar uma máquina Windows do zero, siga [GUIA-OUTRO-PC.md](GUIA-OUTRO-PC.md).
 
+Para gravar a apresentação da atividade, use o [roteiro cronometrado do vídeo](docs/ROTEIRO-VIDEO.md).
+
 ## 1. Instalar ferramentas
 
 - **Docker Desktop (Windows/macOS/Linux)** instala Docker Engine, CLI e Compose: [download oficial](https://www.docker.com/products/docker-desktop/) e [instruções oficiais](https://docs.docker.com/compose/install/). No Windows, iniciar Docker Desktop e usar o backend WSL 2 quando disponível. Em Linux, também é possível instalar Docker Engine e o plugin Compose pelos [guias oficiais](https://docs.docker.com/engine/install/).
@@ -137,3 +139,6 @@ Antes do commit, confira que `.env` não aparece em `git status`. O `.gitignore`
 5. `docker compose ps`
 6. `npm run rdm`
 7. Abra `rdm/RDM-EstuLanches.pdf`
+PARA RODAR:docker compose start app
+docker compose ps
+PARA PARAR DE RODAR:docker compose stop app

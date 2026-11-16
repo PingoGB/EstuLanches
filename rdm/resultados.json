@@ -1,20 +1,18 @@
 {
-  "generatedAt": "2026-11-16T11:56:31.306Z",
+  "generatedAt": "2026-11-16T14:57:51.038Z",
   "packageVersion": "1.0.0",
-  "composePs": "NAME                IMAGE                COMMAND                  SERVICE   CREATED          STATUS                    PORTS\nestulanches-app-1   estulanches-app      \"docker-entrypoint.s…\"   app       46 seconds ago   Up 44 seconds (healthy)   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp\nestulanches-db-1    postgres:16-alpine   \"docker-entrypoint.s…\"   db        18 minutes ago   Up 18 minutes (healthy)   5432/tcp\n",
+  "composePs": "NAME               IMAGE                COMMAND                  SERVICE   CREATED       STATUS                 PORTS\nestulanches-db-1   postgres:16-alpine   \"docker-entrypoint.s…\"   db        3 hours ago   Up 3 hours (healthy)   5432/tcp\n",
   "logCriticalErrors": 0,
   "criticalLogLines": [],
   "health": {
-    "ok": true,
-    "status": 200,
-    "body": {
-      "status": "ok",
-      "database": "connected"
-    }
+    "ok": false,
+    "status": null,
+    "body": null,
+    "error": "fetch failed"
   },
   "checks": {
     "composePs": true,
     "logs": true,
-    "health": true
+    "health": false
   }
 }
