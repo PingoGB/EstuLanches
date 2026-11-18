@@ -73,8 +73,8 @@ function updateSummary() {
   $('#order-total').textContent = money(total);
 }
 $('#order-form').addEventListener('submit', async (event) => {
-  event.preventDefault(); const items = selectedItems(); if (!items.length) { toast('Escolha ao menos um item.'); return; }
-  try { await request(`${API}/orders`, { method: 'POST', body: JSON.stringify({ customerName: event.currentTarget.elements.customerName.value, items }) }); event.currentTarget.reset(); renderOrderProducts(); toast('Pedido registrado com sucesso.'); showView('orders'); }
+  event.preventDefault(); const form = event.currentTarget; const items = selectedItems(); if (!items.length) { toast('Escolha ao menos um item.'); return; }
+  try { await request(`${API}/orders`, { method: 'POST', body: JSON.stringify({ customerName: form.elements.customerName.value, items }) }); form.reset(); renderOrderProducts(); toast('Pedido registrado com sucesso.'); showView('orders'); }
   catch (error) { toast(error.message); }
 });
 const statuses = ['RECEBIDO', 'EM_PREPARO', 'PRONTO', 'ENTREGUE', 'CANCELADO'];
